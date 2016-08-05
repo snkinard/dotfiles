@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 git pull origin master;
+git submodule update --init antigen
+git submodule update --init .vim/bundle/Vundle.vim
 
 function doIt() {
 	rsync --exclude ".git/" \
