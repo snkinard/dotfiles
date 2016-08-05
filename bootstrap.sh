@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
-
 git pull origin master;
 
 function doIt() {
@@ -13,7 +11,7 @@ function doIt() {
 		--exclude ".gitmodules" \
 		--exclude "antigen" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -26,3 +24,4 @@ else
 	fi;
 fi;
 unset doIt;
+
