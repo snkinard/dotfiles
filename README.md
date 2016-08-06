@@ -9,7 +9,7 @@ TODO: Install for Mac OS
 Disclaimer: The following script does not backup any of your current system configurations. There is no "uninstall" feature. It is recommended that you backup your current dotfiles or home directory before running.
 
 ```
-sh -c "`curl -fsSL https://raw.githubusercontent.com/snkinard/dotfiles/master/install.sh `"
+bash -c "`curl -fsSL https://raw.githubusercontent.com/snkinard/dotfiles/master/install.sh `"
 ```
 
 See below if you don't already have curl installed.
