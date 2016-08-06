@@ -102,7 +102,10 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme solarized
+if has("gui_running")
+  colorscheme solarized
+endif
+
 set background=dark
 
 " Set extra options when running in GUI mode
