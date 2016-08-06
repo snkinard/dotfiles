@@ -11,7 +11,7 @@ call vundle#begin('~/.vundle')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -20,8 +20,6 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  stolen from  http://amix.dk/vim/vimrc.html - amix@amix.dk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Source this file: ln -s <PATH_TO_THIS_FILE> ~/.vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -104,7 +102,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
+colorscheme solarized
 set background=dark
 
 " Set extra options when running in GUI mode
