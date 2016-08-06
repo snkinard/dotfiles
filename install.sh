@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-if [[ "$(uname -s)" == "Linux" ]]; then
+if [ "$(uname -s)" == "Linux" ]; then
   echo "Installing dependencies for Linux"
 
   sudo apt-get update
@@ -16,6 +16,6 @@ if [[ "$(uname -s)" == "Linux" ]]; then
   chsh -s $(which zsh)
 
 
-elif [[ "$(uname -s)" == "Darwin" ]]; then
+elif [ "$(uname -s)" == "Darwin" ]; then
   echo "Installing dependencies for Mac OS"
 fi
