@@ -19,3 +19,12 @@ if [ "$(uname -s)" == "Linux" ]; then
 elif [ "$(uname -s)" == "Darwin" ]; then
   echo "Installing dependencies for Mac OS"
 fi
+
+# git that shit
+cd ~
+git clone https://github.com/snkinard/dotfiles.git
+
+cd dotfiles
+./boostrap.sh
+
+
