@@ -27,6 +27,6 @@ else
 fi;
 unset doIt;
 
-" install vim plugins so you don't get grumps
+# install vim plugins so you don't get grumps
 vim +PluginInstall +qall
 
