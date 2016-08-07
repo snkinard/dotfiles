@@ -25,6 +25,6 @@ cd ~
 git clone https://github.com/snkinard/dotfiles.git
 
 cd dotfiles
-./boostrap.sh
+~/dotfiles/boostrap.sh
 
 
