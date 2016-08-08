@@ -14,6 +14,8 @@ function doIt() {
 		--exclude ".gitmodules" \
 		--exclude "antigen" \
 		-avh --no-perms . ~;
+
+  vim +PluginInstall +qall
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -27,6 +29,4 @@ else
 fi;
 unset doIt;
 
-# install vim plugins so you don't get grumps
-vim +PluginInstall +qall
 
