@@ -24,3 +24,6 @@ alias ll="ls -lGaf"
 if [ "$(uname -s)" = "Linux" ]; then
   alias ll="ls -lGa"
 fi
+
+# Python Stuff
+export WORKON_HOME=~/.virtualenvs
