@@ -11,6 +11,7 @@ call vundle#begin('~/.vundle')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -26,6 +27,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 imap jj <esc>
+let mapleader = "\<Space>"
 
 " Sets how many lines of history VIM has to remember
 set history=700
