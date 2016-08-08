@@ -9,12 +9,12 @@ if [ "$(uname -s)" == "Linux" ]; then
   sudo apt-get install make
   sudo apt-get install gawk
   sudo apt-get install ruby
+  sudo apt-get install git
 
   # install linuxbrew
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 
   # install other dependencies with brew
-  brew install git
   brew install vim
   brew install zsh
 
