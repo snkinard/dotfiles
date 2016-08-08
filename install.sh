@@ -5,10 +5,18 @@ if [ "$(uname -s)" == "Linux" ]; then
 
   sudo apt-get update
 
-  # dependencies
+  # linux-brew dependencies
+  sudo apt-get install make
+  sudo apt-get install gawk
+  sudo apt-get install ruby
   sudo apt-get install git
-  sudo apt-get install vim
-  sudo apt-get install zsh
+  
+  # install linuxbrew
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+
+  export PATH="$HOME/.linuxbrew/bin:$PATH"
+  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 elif [ "$(uname -s)" == "Darwin" ]; then
   echo "Installing dependencies for Mac OS"
@@ -16,10 +24,11 @@ elif [ "$(uname -s)" == "Darwin" ]; then
   # make sure homebrew is installed
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
 
-  brew install git
-  brew install vim
-  brew install zsh
 fi
+
+brew install git
+brew install vim
+brew install zsh
 
 # make zsh the default shell
 chsh -s $(which zsh)
