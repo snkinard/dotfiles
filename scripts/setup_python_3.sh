@@ -2,11 +2,15 @@
 
 # install python 3
 if [ "$(uname -s)" = "Linux" ]; then
-  sudo apt-get install python3
+  sudo add-apt-repository ppa:fkrull/deadsnakes
+  sudo apt-get update
+  sudo apt-get install python3.5
   sudo apt-get install python-pip
+  sudo add-apt-repository --remove ppa:fkrull/deadsnakes
+
   sudo pip install --upgrade pip
-  pip install --upgrade virtualenv
-  pip install --upgrade virtualenvwrapper
+  sudo pip install --upgrade virtualenv
+  sudo pip install --upgrade virtualenvwrapper
 elif [ "$(uname -s)" = "Darwin" ]; then
   brew install python3
   pip install --upgrade virtualenv
