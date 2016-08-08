@@ -20,13 +20,7 @@ antigen apply
 # Aliases
 alias ll="ls -lGaf"
 
-# OS Specific stuff
+# Linux Specific stuff
 if [ "$(uname -s)" = "Linux" ]; then
-
-  # linuxbrew stuff
-  export PATH="$HOME/.linuxbrew/bin:$PATH"
-  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
   alias ll="ls -lGa"
 fi
