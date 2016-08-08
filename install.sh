@@ -5,14 +5,20 @@ if [ "$(uname -s)" == "Linux" ]; then
 
   sudo apt-get update
 
-  # git
-  sudo apt-get install git
+  # linux-brew dependencies
+  sudo apt-get install make
+  sudo apt-get install gawk
+  sudo apt-get install ruby
 
-  # vim
-  sudo apt-get install vim
+  # install linuxbrew
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 
-  # install zsh and set it as the default shell
-  sudo apt-get install zsh
+  # install other dependencies with brew
+  brew install git
+  brew install vim
+  brew install zsh
+
+  # make zsh the default shell
   chsh -s $(which zsh)
 
 

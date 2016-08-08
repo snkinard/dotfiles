@@ -19,3 +19,9 @@ antigen apply
 
 # Aliases
 alias ll="ls -lGaf"
+
+if [ "$(uname -s)" == "Linux" ]; then
+  export PATH="$HOME/.linuxbrew/bin:$PATH"
+  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+fi
