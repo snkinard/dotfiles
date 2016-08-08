@@ -29,5 +29,4 @@ if [ "$(uname -s)" = "Linux" ]; then
   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
   alias ll="ls -lGa"
-elif [ "$(uname -s)" = "Darwin" ]; then
 fi

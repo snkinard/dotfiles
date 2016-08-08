@@ -31,6 +31,7 @@ brew install vim
 brew install zsh
 
 # make zsh the default shell
+command -v zsh | sudo tee -a /etc/shells
 chsh -s $(which zsh)
 
 # git that shit
