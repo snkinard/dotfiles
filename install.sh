@@ -28,5 +28,6 @@ chsh -s $(which zsh)
 cd ~
 git clone https://github.com/snkinard/dotfiles.git
 
+cd dotfiles
 ~/dotfiles/bootstrap.sh
 
