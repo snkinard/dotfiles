@@ -21,10 +21,8 @@ elif [ "$(uname -s)" == "Darwin" ]; then
   brew install zsh
 fi
 
-if [ "$(echo $SHELL)" != "bin/zsh" ]; then
-  # make zsh the default shell
-  chsh -s $(which zsh)
-fi
+# make zsh the default shell
+chsh -s $(which zsh)
 
 # git that shit
 cd ~
