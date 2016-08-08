@@ -13,6 +13,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude ".gitmodules" \
 		--exclude "antigen" \
+		--exclude "scripts" \
 		-avh --no-perms . ~;
 
   vim +PluginInstall +qall
