@@ -2,8 +2,6 @@ Here be my *nix system configs.
 
 #
 
-TODO: Install for Mac OS
-
 # Install
 
 Disclaimer: The following script does not backup any of your current system configurations. There is no "uninstall" feature. It is recommended that you backup your current dotfiles or home directory before running.
@@ -11,6 +9,8 @@ Disclaimer: The following script does not backup any of your current system conf
 ```
 bash -c "`curl -fsSL https://raw.githubusercontent.com/snkinard/dotfiles/master/install.sh `"
 ```
+
+You may need to restart your shell after running the install script.
 
 See below if you don't already have curl installed.
 
