@@ -14,9 +14,9 @@ TODO: Better readme
 
 Built on the shoulders of the work of others. I spent a long time looking at the repos to get ideas and see how to make things work:
 
-https://github.com/Valloric/dotfiles
-https://github.com/davidvuong/dotfiles
-https://github.com/holman/dotfiles
-https://github.com/mathiasbynens/dotfiles
-https://github.com/skwp/dotfiles
-https://github.com/cowboy/dotfiles
+* https://github.com/Valloric/dotfiles
+* https://github.com/davidvuong/dotfiles
+* https://github.com/holman/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/skwp/dotfiles
+* https://github.com/cowboy/dotfiles
