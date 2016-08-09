@@ -1,5 +1,12 @@
 #!/bin/bash
 
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+if [[ ! -a ~/.gitignore_global ]]
+then
+  ln -s $script_dir/gitignore_global.symlink ~/.gitignore_global
+fi
+
 current_name=$(git config --global --get user.name)
 
 # if current_name is empty, then add a name
@@ -38,7 +45,7 @@ git config --global color.ui true
 # Forces the use of SSH instead of HTTPS for any URLs that point to github.
 # This means that if a repo uses "https://github/..." for "origin", we will
 # automatically use SSH. No more password prompts!
-git config --global url.ssh://git@github.com/.insteadOf https://github.com/
+# git config --global url.ssh://git@github.com/.insteadOf https://github.com/
 
 # When editing the commit message, git will now always include a diff of the
 # changes below the message area (the diff does NOT become part of the commit
