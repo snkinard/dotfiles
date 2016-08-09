@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install python 3
-if [ "$(uname -s)" = "Linux" ]; then
+#if [ "$(uname -s)" = "Linux" ]; then
   # currently busted
 
   #sudo add-apt-repository ppa:fkrull/deadsnakes
@@ -13,10 +13,9 @@ if [ "$(uname -s)" = "Linux" ]; then
   #sudo pip install --upgrade pip
   #sudo pip install --upgrade virtualenv
   #sudo pip install --upgrade virtualenvwrapper
-elif [ "$(uname -s)" = "Darwin" ]; then
-  brew install python3
+if [ "$(uname -s)" = "Darwin" ]; then
   pip install --upgrade virtualenv
   pip install --upgrade virtualenvwrapper
+  mkdir ~/.virtualenvs
 fi
 
-mkdir ~/.virtualenvs

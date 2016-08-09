@@ -1,31 +1,22 @@
 #!/bin/bash
 
-if [ "$(uname -s)" == "Linux" ]; then
-  echo "Installing dependencies for Linux"
+# pull in submodules
+git submodule update --init zsh/antigen
+git submodule update --init vim/vim.symlink/bundle/Vundle.vim
 
-  sudo apt-get update
+# get the dir of the current script
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+platform=$(uname)
 
-  sudo apt-get install git
-  sudo apt-get install vim
-  sudo apt-get install zsh
-elif [ "$(uname -s)" == "Darwin" ]; then
-  echo "Installing dependencies for Mac OS"
-  
-  # make sure homebrew is installed
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
-  brew install git
-  brew install vim
-  brew install zsh
+if [ $platform == "Linux" ]; then
+  $script_dir/apt-get/update.sh
+elif [ $platform == "Darwin" ]; then
+  $script_dir/brew-recipes/install.sh
 fi
 
-# make zsh the default shell
-command -v zsh | sudo tee -a /etc/shells
-chsh -s $(which zsh)
+$script_dir/git/update.sh
+$script_dir/zsh/install.sh
+$script_dir/vim/update.sh
+$script_dir/python/install.sh
 
-# git that shit
-cd ~
-git clone https://github.com/snkinard/dotfiles.git
-
-cd dotfiles
-~/dotfiles/bootstrap.sh
-
+# don't run the update script since each install script calls update
