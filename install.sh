@@ -2,7 +2,7 @@
 
 # pull in submodules
 git submodule update --init zsh/antigen
-git submodule update --init vim/vim.symlink/bundle/Vundle.vim
+git submodule update --init vim/vim.symlink/bundle/Vundle.vim.git
 
 # get the dir of the current script
 script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
