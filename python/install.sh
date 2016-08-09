@@ -14,9 +14,8 @@ if [ "$(uname -s)" = "Linux" ]; then
   #sudo pip install --upgrade virtualenv
   #sudo pip install --upgrade virtualenvwrapper
 elif [ "$(uname -s)" = "Darwin" ]; then
-  brew install python3
   pip install --upgrade virtualenv
   pip install --upgrade virtualenvwrapper
+  mkdir ~/.virtualenvs
 fi
 
-mkdir ~/.virtualenvs

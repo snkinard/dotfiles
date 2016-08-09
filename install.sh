@@ -15,9 +15,4 @@ $script_dir/zsh/install.sh
 $script_dir/vim/install.sh
 $script_dir/python/install.sh
 
-# make zsh the default shell
-command -v zsh | sudo tee -a /etc/shells
-chsh -s $(which zsh)
-
-# $script_dir/update.sh
-
+# don't run the update script since each install script calls update

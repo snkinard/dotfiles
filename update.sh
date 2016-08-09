@@ -1,34 +1,18 @@
-#!/usr/bin/env bash
-cd "$(dirname "${BASH_SOURCE}")";
+#!/bin/bash
+# get the dir of the current script
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+platform=$(uname)
 
 git pull origin master;
-git submodule update --init antigen
-git submodule update --init .vim/bundle/Vundle.vim
+git submodule update --init zsh/antigen
+git submodule update --init vim/vim.symlink/bundle/Vundle.vim
 
-function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "install.sh" \
-		--exclude "README.md" \
-		--exclude ".gitmodules" \
-		--exclude "antigen" \
-		--exclude "scripts" \
-		-avh --no-perms . ~;
+if [ $platform == "Linux" ]; then
+  $script_dir/apt-get/update.sh
+elif [ $platform == "Darwin" ]; then
+  $script_dir/brew-recipes/update.sh
+fi
 
-  vim +PluginInstall +qall
-}
-
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-      doIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-	doIt;
-	fi;
-fi;
-unset doIt;
-
-
+$script_dir/git/update.sh
+$script_dir/zsh/update.sh
+$script_dir/vim/update.sh

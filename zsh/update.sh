@@ -4,5 +4,7 @@ script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 if [[ ! -a ~/.zshrc ]]
 then
-  ln -s $script_dir/zsh/zshrc.zsh ~/.zshrc
+  ln -s $script_dir/zsh/zshrc.symlink ~/.zshrc
 fi
+
+source ~/.zshrc
