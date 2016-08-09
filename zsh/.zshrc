@@ -20,7 +20,7 @@ antigen apply
 # Aliases
 alias ll="ls -lGaf"
 
-# Linux Specific stuff
+# Linux Specific stuff. eventually this is in its on file
 if [ "$(uname -s)" = "Linux" ]; then
   alias ll="ls -lGa"
 fi
