@@ -7,4 +7,4 @@ then
   ln -s $script_dir/zshrc.symlink ~/.zshrc
 fi
 
-source ~/.zshrc
+# source ~/.zshrc
