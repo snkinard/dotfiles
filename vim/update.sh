@@ -12,4 +12,7 @@ then
   ln -s $script_dir/vim.symlink ~/.vim
 fi
 
+cd ..
+git submodule update --init vim/vim.symlink/bundle/Vundle.vim
+
 vim +PluginInstall +qall
