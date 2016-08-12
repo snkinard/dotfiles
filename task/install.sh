@@ -20,5 +20,4 @@ chmod +x ~/.task/hooks/on-modify.timewarrior
 cd $script_dir
 rm -rf tmp
 
-
 $script_dir/update.sh
