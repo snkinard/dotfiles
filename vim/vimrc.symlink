@@ -26,8 +26,25 @@ filetype plugin indent on    " required
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-imap jj <esc>
-let mapleader = "\<Space>"
+let mapleader = ","
+
+imap ;; <Esc>
+vmap ;; <Esc>
+
+" Use Q for formatting the current paragraph (or visual selection)
+vmap Q gq
+nmap Q gqap
+
+" These create newlines like o and O but stay in normal mode
+nmap zj o<Esc>k
+nmap zk O<Esc>j
+
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>k <c-w>k
+nmap <leader>j <c-w>j
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -144,7 +161,7 @@ set expandtab
 " http://vim.wikia.com/wiki/Indent_with_tabs,_align_with_spaces#Smart_tabs
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
@@ -232,9 +249,3 @@ function! HasPaste()
   return ''
 endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Other
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Disable .netrwhist file which tracks cross-network edits
-:let g:netrw_dirhistmax = 0
