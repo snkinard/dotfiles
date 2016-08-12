@@ -11,6 +11,8 @@ if [ $platform == "Darwin" ]; then
   brew install git
   brew install git-extras
   brew install coreutils
+  brew install cmake
+  brew install gcc
 
   # Dev Tools
   brew install vim

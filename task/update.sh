@@ -1,0 +1,9 @@
+#!/bin/bash
+
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+if [[ ! -a ~/.taskrc ]]
+then
+  ln -s $script_dir/taskrc.symlink ~/.taskrc
+fi
+
