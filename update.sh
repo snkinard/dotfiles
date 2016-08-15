@@ -12,3 +12,4 @@ $script_dir/brew/update.sh
 $script_dir/git/update.sh
 $script_dir/zsh/update.sh
 $script_dir/vim/update.sh
+$script_dir/task/update.sh

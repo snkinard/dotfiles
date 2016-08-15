@@ -38,6 +38,8 @@ if [ $platform == "Darwin" ]; then
   brew cask install dropbox
   brew cask install virtualbox
   brew cask install iterm2
+  brew cask install kindle
+  brew cask install focus
 
   # remove outdated versions from cellar
   brew cleanup
