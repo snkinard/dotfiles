@@ -74,7 +74,7 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
+# defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
