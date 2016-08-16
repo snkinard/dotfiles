@@ -15,7 +15,7 @@ antigen bundle taskwarrior
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme pygmalion
+antigen theme agnoster
 
 # Tell antigen that you're done.
 antigen apply
