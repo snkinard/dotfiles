@@ -40,6 +40,7 @@ if [ $platform == "Darwin" ]; then
   brew cask install iterm2
   brew cask install kindle
   brew cask install focus
+  brew cask install pycharm
 
   # remove outdated versions from cellar
   brew cleanup

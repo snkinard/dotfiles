@@ -11,8 +11,17 @@ call vundle#begin('~/.vundle')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" coding
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,6 +67,9 @@ set autoread
 
 " turn on line numbers
 set number
+
+" paste stuff from the system
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -118,14 +130,15 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
+
 syntax enable
+colorscheme solarized
 
-if has("gui_running")
-  colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
 endif
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -222,7 +235,6 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -249,3 +261,55 @@ function! HasPaste()
   return ''
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Coding related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Proper PEP8 indentation (python development)
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" Flag extra whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+" prettier?
+let python_highlight_all=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1  " preview folded items
+let g:SimpylFold_fold_docstring = 0     " do not fold doc strings
+let g:SimpylFold_fold_import = 0        " do not fold imports
+" make sure SimpylFold is properly loaded in certain cases
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
