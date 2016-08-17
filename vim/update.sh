@@ -13,12 +13,17 @@ then
   ln -s $script_dir/vim.symlink ~/.vim
 fi
 
-# Idea is only used in OSX
+# Idea and Macvim (guivim) only used in OSX
 if [[ $platform == *Darwin* ]]
 then
   if [[ ! -a ~/.ideavimrc ]] 
   then 
     ln -s $script_dir/ideavimrc.symlink ~/.ideavimrc 
+  fi
+
+  if [[ ! -a ~/.gvimrc ]]
+  then
+    ln -s $script_dir/gvimrc.symlink ~/.gvimrc
   fi
 fi
 

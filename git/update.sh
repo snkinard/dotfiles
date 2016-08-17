@@ -55,3 +55,5 @@ git config --global commit.verbose true
 # Prettier diffs
 git config --global diff.compactionHeuristic true
 
+# Use vim as the editor
+git config --global core.editor $(which vim)
