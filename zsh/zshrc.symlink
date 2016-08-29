@@ -45,3 +45,5 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
       man "$@"
 }
+
+tail-clog() { tail -f $1 | clog default }

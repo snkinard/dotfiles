@@ -18,6 +18,7 @@ if [ $platform == "Darwin" ]; then
   brew install vim
   brew install macvim
   brew install jq
+  brew install clog
 
   # Languages
   brew install python3
