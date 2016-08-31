@@ -1,5 +1,5 @@
 default rule /WARN|DEBUG/   --> yellow line
-default rule /ERROR|SEVERE/ --> red line
-default rule /CRITICAL/     --> bold red line
+default rule /ERROR|Error|SEVERE/ --> red line
+default rule /CRITICAL|Traceback/     --> bold red line
 default rule /INFO/     --> green line
 default rule /ignore/       --> suppress
