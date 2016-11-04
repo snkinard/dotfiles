@@ -28,6 +28,7 @@ if [ $platform == "Darwin" ]; then
   brew install shpotify
   brew install task
   brew install tree
+  brew install dfu-util
 
   # cask
   brew tap caskroom/cask
