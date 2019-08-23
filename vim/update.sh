@@ -13,6 +13,8 @@ then
   ln -s $script_dir/vim.symlink ~/.vim
 fi
 
+vim +PluginInstall +qall
+
 # Idea and Macvim (guivim) only used in OSX
 if [[ $platform == *Darwin* ]]
 then
@@ -21,4 +23,4 @@ then
     ln -s $script_dir/ideavimrc.symlink ~/.ideavimrc 
   fi
 
-vim +PluginInstall +qall
+
