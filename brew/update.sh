@@ -33,5 +33,4 @@ if [ $platform == "Darwin" ]; then
 
   # remove outdated versions from cellar
   brew cleanup
-  brew linkapps
 fi
