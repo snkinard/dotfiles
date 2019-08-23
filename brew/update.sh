@@ -16,7 +16,6 @@ if [ $platform == "Darwin" ]; then
 
   # Dev Tools
   brew install vim
-  brew install macvim
   brew install jq
   brew install clog
 
@@ -31,7 +30,6 @@ if [ $platform == "Darwin" ]; then
   # cask
   brew tap caskroom/cask
   brew cask install intellij-idea
-  brew cask install iterm2
 
   # remove outdated versions from cellar
   brew cleanup

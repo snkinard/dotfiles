@@ -21,10 +21,4 @@ then
     ln -s $script_dir/ideavimrc.symlink ~/.ideavimrc 
   fi
 
-  if [[ ! -a ~/.gvimrc ]]
-  then
-    ln -s $script_dir/gvimrc.symlink ~/.gvimrc
-  fi
-fi
-
 vim +PluginInstall +qall
