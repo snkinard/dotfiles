@@ -22,5 +22,5 @@ then
   then 
     ln -s $script_dir/ideavimrc.symlink ~/.ideavimrc 
   fi
-
+fi
 
