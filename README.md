@@ -6,6 +6,8 @@ Here be my *nix system configs.
 
 Checkout this repo and run install.sh
 
+Make sure to install the included font in the "fonts" directory. In iterm set the color theme to solarized dark and the font to the included font
+
 Disclaimer: The following script does not backup any of your current system configurations. There is no "uninstall" feature. It is recommended that you backup your current dotfiles or home directory before running.
 
 TODO: Better readme

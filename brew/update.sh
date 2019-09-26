@@ -16,35 +16,21 @@ if [ $platform == "Darwin" ]; then
 
   # Dev Tools
   brew install vim
-  brew install macvim
   brew install jq
   brew install clog
 
   # Languages
-  brew install python3
-  brew install python
+  #brew install python3
+  #brew install python
 
   # other stuff
-  brew install shpotify
-  brew install task
   brew install tree
   brew install dfu-util
 
   # cask
   brew tap caskroom/cask
   brew cask install intellij-idea
-  brew cask install google-chrome
-  brew cask install slack
-  brew cask install spotify
-  brew cask install flux
-  brew cask install dropbox
-  brew cask install virtualbox
-  brew cask install iterm2
-  brew cask install kindle
-  brew cask install focus
-  brew cask install pycharm
 
   # remove outdated versions from cellar
   brew cleanup
-  brew linkapps
 fi
