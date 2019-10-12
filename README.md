@@ -23,7 +23,21 @@ Run it.
 % ./install.sh
 ```
 
-Make sure to install the included font in the "fonts" directory. In iterm set the color theme to solarized dark and the font to the included font
+## iterm2
+
+Install the included font so that powerline renders correctly in iterm and enable solarized:
+
+1. Open `iterm`
+2. "Install" the font provided in the `dotfiles` repo:
+  ```
+  % cp dotfiles/fonts/Roboto\ Mono\ Light\ for\ Powerline.ttf /Library/Fonts/
+  ```
+3. Open preferences (`cmd+,`)
+4. Select the `Profiles` tab
+5. Select the `Text` tab under `Profiles` 
+6. Change the `Font` dropdown to `Roboto Mono Light for Powerline`
+7. Select the `Colors` tab under `Profiles`
+8. Change the `Color Presets...` dropdown to `Solarized Dark`
 
 # Credit where Credit is due
 
