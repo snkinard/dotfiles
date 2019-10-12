@@ -30,6 +30,7 @@ if [ $platform == "Darwin" ]; then
   # cask
   brew tap caskroom/cask
   brew cask install intellij-idea
+  brew cask install iterm2
 
   # remove outdated versions from cellar
   brew cleanup
