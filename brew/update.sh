@@ -19,18 +19,18 @@ if [ $platform == "Darwin" ]; then
   brew install jq
   brew install clog
 
-  # Languages
-  #brew install python3
-  #brew install python
-
   # other stuff
   brew install tree
   brew install dfu-util
 
   # cask
-  brew tap caskroom/cask
+  brew tap homebrew/cask-cask
   brew cask install intellij-idea
   brew cask install iterm2
+  brew cask install ivpn
+  brew cask install lastpass
+  brew cask install malwarebytes
+  brew cask install slack
 
   # remove outdated versions from cellar
   brew cleanup
