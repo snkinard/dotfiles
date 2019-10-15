@@ -16,6 +16,8 @@ Git (get?) this repo on your local machine. I like to put it in my home director
 % git clone https://github.com/snkinard/dotfiles.git
 ```
 
+While you're at it. Go ahead and set up an [ssh key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for this machine in your github account
+
 Run it.
 
 ```
